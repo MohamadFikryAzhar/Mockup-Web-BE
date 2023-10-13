@@ -288,8 +288,15 @@ CREATE TABLE public.users (
     "updatedAt" timestamp without time zone
 );
 
-
 ALTER TABLE public.users OWNER TO postgres;
+
+CREATE TABLE public.domicile (
+    id uuid NOT NULL,
+    country VARCHAR (255) NOT NULL,
+
+
+    
+)
 
 --
 -- TOC entry 3397 (class 0 OID 0)
@@ -447,6 +454,7 @@ INSERT INTO public.users (id, email, password, level, token, is_verified, "creat
 ALTER TABLE ONLY public.address
     ADD CONSTRAINT address_pkey1 PRIMARY KEY (id);
 
+--adding a primary key for address
 
 --
 -- TOC entry 3222 (class 2606 OID 85016)
